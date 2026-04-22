@@ -8,7 +8,7 @@
 #define MEM_WR_ERR "Memory Write Error"
 #define  TH_CR_ERR "Thread Creation Error"
 
-int maint(int argc, char* argv[]) {
+int main(int argc, char* argv[]) {
 if(argc<3) {
 printf("Insufficient Arguments");
 return EXIT_FAILURE;
