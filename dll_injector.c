@@ -43,9 +43,9 @@ printf(TH_CR_ERR);
 return EXIT_FAILURE;
 }
 WaitForSingleObject(hThread,INFINITE);
-
-CloseHandle(hThread);
-CloseHandle(hProcess);
+CLEANUP:
+ CloseHandle(hThread);
+ CloseHandle(hProcess);
 
 
 return EXIT_SUCCESS;
