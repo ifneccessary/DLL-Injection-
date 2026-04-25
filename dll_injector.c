@@ -1,7 +1,7 @@
 #include <windows.h>
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 
 
 #define MEM_ALLOC_ERR "Memory Allocation Error"
@@ -15,7 +15,7 @@ return EXIT_FAILURE;
 }
 DWORD PID=atoi(argv[1]);
 const char* DLL_PATH=argv[2];
-SIZE_T PATH_SIZE=sizeof(DLL_PATH);
+SIZE_T PATH_SIZE=strlen(DLL_PATH)+1;
 
 hProcess=OpenProcess(PROCESS_ALL_ACCESS, FALSE, PID);
 if(!hProcess){
